@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=CSF1 Viewer
+Comment=EXPERIMENTAL — JCkernel CSF1 viewer (Format can erase disks)
+Exec=CSF1-Viewer
+Terminal=false
+Categories=Utility;Filesystem;
