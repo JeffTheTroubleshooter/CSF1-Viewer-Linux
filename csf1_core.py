@@ -268,7 +268,7 @@ class CSF1Volume:
             self.message = "WRONG_VERSION"
             return "WRONG_VERSION"
         self.message = "MOUNT_OK"
-            return "MOUNT_OK"
+        return "MOUNT_OK"
 
     def detect_and_mount(self) -> bool:
         # Inspect path / GUI mount: LBA 4096 only. Do not scan first 64 MiB.
