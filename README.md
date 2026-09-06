@@ -8,6 +8,8 @@ Public host tool for [JCkernel](https://github.com/JeffTheTroubleshooter/JCkerne
 
 This repo is the **Linux edition**. It is not the kernel.
 
+A fresh clone needs `csf1_core.py`, `csf1_viewer.py`, and `qcow2io.py` on `main` (no `jck_install.py`).
+
 Sister editions:
 
 - [CSF1-Viewer-macOS](https://github.com/JeffTheTroubleshooter/CSF1-Viewer-macOS)
