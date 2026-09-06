@@ -1,1 +1,1 @@
-@/tmp/viewer_content_exact.py
+PLACEHOLDER_LOAD_FROM_/tmp/mcp_fix_viewer_NOW.json
