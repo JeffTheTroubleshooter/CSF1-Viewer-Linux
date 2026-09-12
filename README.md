@@ -24,25 +24,26 @@ Needs `python3`. Fedora GUI: `sudo dnf install python3-tkinter`.
 
 **Update** in the window checks this public repo’s `VIEWER_VERSION` and can download `main` over the local files. No GitHub login.
 
+## Pull crash logs (v0.3.10)
+
+Bootable USB layout: ESP + a **small CSF1 partition** (usually `/dev/sdX2`)
+with the superblock at LBA 0 of that slice or LBA 4096 of the whole disk.
+
+```bash
+sudo ./CSF1-Viewer.sh
+# Scan JCkernel USB → Mount / Detect CSF1 → Pull crash logs
+```
+
+Writes `~/Desktop/JCkernel-crash-logs/Base/BPL/` and
+`~/Desktop/JCkernel-crash-logs/Base/Crash_Dump/`.
+
+Mount tries **partition 2, then 1, then the whole disk**, so a tiny CSF1
+slice is not skipped.
+
 ## Boot USB + BPL (v0.3.8)
 
 `make bootable-usb` writes ESP + CSF1 partition 2 (origin LBA 4096).
-After a 0.0.323+ boot, open that partition and look at `/Base/BPL/`:
-
-- `boot_passed.log`
-- `boot_failed.log`
-- `boot_passed_with_warnings.log`
-
-Viewer lists those folders, can export/import them (256 KiB cap), and auto-selects the newest BPL result. `/Base/Crash_Dump/` still works.
-
-## Drag and drop (v0.3.7)
-
-1. Mount the USB / CSF1 image.
-2. Set dest path (default `/Base/Files`).
-3. Drop files **or a whole folder** onto the second drop zone (web) or onto the window (desktop Tk).
-4. Import file / Import folder buttons do the same thing.
-
-CSF1 file cap is still 256 KiB per file.
+After a 0.0.323+ boot, look at `/Base/BPL/` and `/Base/Crash_Dump/`.
 
 ## Related
 
